@@ -15,9 +15,6 @@ To produce informative results for this case we will consider available sources 
 First step in our work is to identify reliable recreational data to be paired with projected climate data and merge the information 
 
 
-## James
-## Warren
-## Fabiana
 
 
 ### Sources
@@ -25,3 +22,7 @@ https://www.opensnowmap.org/
 
 https://www.nohrsc.noaa.gov/gisdatasets/
 
+
+### James Stawarz
+### Warren D. Kelly Jr.
+### Fabiana Ullman
