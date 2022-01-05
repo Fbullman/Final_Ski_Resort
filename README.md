@@ -14,8 +14,8 @@ Go-to Ski Resort is an application created to help Ski Resorts reduce the yearly
 To produce informative results for this case we will consider available sources of recreational and meteorological data and Machine Learning model to predict natural snow accumulation and project snowmaking for the season.
 
 ### 2.1. Select Datasets
-First step in our work is to identify reliable recreational winter weather data to be paired with projected climate data and merge the information to a application to make business recomendation.
-Select data for ski resort gear considering recreation activity (ski and snowborad), season lenght and monetization approach.
+First step in our work is to identify reliable recreational winter weather data to be paired with projected climate data and merge the information to an application to make business recommendation.
+Select data for ski resort gear considering recreation activity (ski and snowboard), season lenght and monetization approach.
 
 ### 3. Results
 
