@@ -11,5 +11,6 @@ Go-to Ski Resort is an application created to help Ski Resorts reduce the yearly
 
 ## 2. Methods
 
+To produce informative results for this case we will consider available sourcers of recreational and meteorological data
 
-This case solution is solved with the use of collected data from previous years and Machine Learning. 
+and Machine Learning. 
