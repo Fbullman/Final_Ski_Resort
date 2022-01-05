@@ -11,6 +11,6 @@ Go-to Ski Resort is an application created to help Ski Resorts reduce the yearly
 
 ## 2. Methods
 
-To produce informative results for this case we will consider available sourcers of recreational and meteorological data
+To produce informative results for this case we will consider available sources of recreational and meteorological data to and Machine Learning to predict natural snow accumulation to project snowmaking for the season
 
-and Machine Learning. 
+
