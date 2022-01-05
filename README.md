@@ -1,4 +1,4 @@
-# Final_Ski_Resort
+# George Washington University - Data Analytics - Final Project
 
 ## Go-to Ski Resort Source
 
@@ -15,4 +15,13 @@ To produce informative results for this case we will consider available sources 
 First step in our work is to identify reliable recreational data to be paired with projected climate data and merge the information 
 
 
+## James
+## Warren
+## Fabiana
+
+
+### Sources
+https://www.opensnowmap.org/
+
+https://www.nohrsc.noaa.gov/gisdatasets/
 
