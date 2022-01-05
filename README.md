@@ -22,7 +22,8 @@ https://www.opensnowmap.org/
 
 https://www.nohrsc.noaa.gov/gisdatasets/
 
+#### Students
 
-### James Stawarz
-### Warren D. Kelly Jr.
-### Fabiana Ullman
+James Stawarz
+Warren D. Kelly Jr.
+Fabiana Ullman
