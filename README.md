@@ -1,36 +1,51 @@
-# George Washington University - Data Analytics - Final Project
+# Ski Resort Final Project
 
-## Go-to Ski Resort Source
+## Overview of Project
 
-### 1. Introduction
-Go-to Ski Resort is an application created to help Ski Resorts reduce the yearly issue of predicting the amount of natural snow and to be able to prepare for the ski season in two aspects:
+In this project, we are working with an upstart ski resort in (Vermont, Colorado, other?). The owner had hoped that they would be able to rely on 
+natural snow and avoid the costs of producing their own snow. However, after their first ski season, the resort owner realized
+that they had drastically underestimated the amount of snow they had needed to produce.
 
-* Projections of natural snow and projections of snowmaking conditions to determine the amount of snow the resort must make for the season.
- 
-* Initial measurement of the purchased ski gear and snowmaking supplies. 
+This year, they have hired the WFJ Consulting team to review available data and make predictions regarding the amount of snow the resort will
+need to produce, the cost of such and additional questions regarding the profit potential of the ski resort.
 
-### 2. Goal
+### Purpose
 
-To produce informative results for this case we will consider available sources of recreational and meteorological data and Machine Learning model to predict natural snow accumulation and project snowmaking for the season.
+The purpose of this project will be to help the ski owner make informed predictions about the amount of natural snowfall over the course of the ski
+season. Using past weather data, we will use a regression model for each month to determine an estimated amount of snowfall the resort can rely on.
+Then, using skiier and other weather data, we will aim to give the ski resort an estimated amount of snow to produce over the course of the season and
+the cost of doing this.
 
-### 2.1. Select Datasets
-First step in our work is to identify reliable recreational winter weather data to be paired with projected climate data and merge the information to an application to make business recommendation.
-Select data for ski resort gear considering recreation activity (ski and snowboard), season lenght and monetization approach.
+## Results
 
-### 3. Results
+To begin our project, we first had to clean and collect the data. 
 
-Summarize results for a region, time and period and provide detailed baseline and future snow modeling for ski resorts
+Weather data was collected from: 
+
+https://www.ncdc.noaa.gov/cdo-web/ 
+https://www.kaggle.com/mrmarjo/resort-daily-snowfall-20092017/code
+
+Skiier user data was collected from:
+
+https://www.nsaa.org/NSAA/Media/Industry_Stats.aspx
+
+Additional sources used as references: 
+https://www.coloradoski.com/resort-statistics
 
 
-### Sources
-https://www.opensnowmap.org/
+### Project Work Flow
 
-https://www.nohrsc.noaa.gov/gisdatasets/
+- Weather data is pulled from the National Oceanic and Atmospheric Administration for relevant months (Ski season)
+- Data is cleaned using Python 
+- Data is imported into SQL for storage and additional transformations and isolations. This will also allow for data from furture years to be added
+and accounted for in future analysis
+- Data is exported from SQL to Python in order to perform timelapse analysis for each relevant month to help identify trends.
+- Data can also be imported into R to perform regression analysis
+- Lastly, data exported from SQL can be imported into Tableau in order to create visualizations for the weather. 
 
-##### Students
 
-James Stawarz,
-
-Warren D. Kelly Jr.,
+### Students
 
 Fabiana Ullman
+Warren D. Kelly Jr.
+James Stawarz
