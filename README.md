@@ -40,7 +40,8 @@ https://www.coloradoski.com/resort-statistics
 - Data is imported into SQL for storage and additional transformations and isolations. This will also allow for data from furture years to be added
 and accounted for in future analysis
 - Data is exported from SQL to Python in order to perform timelapse analysis for each relevant month to help identify trends.
-- Data can also be imported into R to perform regression analysis
+- For the Machine Learning compontent, we will attempt to predit future snowfall amounts. The thought would be to use timeseres data and possibly
+an ARIMA model to identify trends in the snowfall amounts over the course of the ski season months. 
 - Lastly, data exported from SQL can be imported into Tableau in order to create visualizations for the weather. 
 
 
