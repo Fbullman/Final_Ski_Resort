@@ -1,12 +1,12 @@
 # Ski Resort Final Project
 
-## First Segement 
+## First Segment 
 
 ### Selected Topic
 
 For this project, we have decided to work with the Telluride Ski Resort in Mountain Village, Colorado. As snow is essential to the ski resort business,
 we will working to predict the amount of natural snow the ski resort will receive in the upcoming 2022-2023 ski season. The predictions are crucial to
-the business as they will be used to create cost estimates how much artificial snow the resort will need to produce in order to keep the resort 
+the business as they will be used to create cost estimates for how much artificial snow the resort will need to produce in order to keep the resort 
 operating optimally.
 
 ### Reason Topic Was Selected
@@ -37,7 +37,7 @@ current snow depth on that day, and the daily maximum and minimum temperatures.
 
 https://www.ncdc.noaa.gov/cdo-web/ 
 
-Additionally, we collected several sources of reference data from various web sources regarding the ski resorts located in Colorado, and elsewhere in
+Additionally, we collected several sources of reference data from various web pages regarding the ski resorts located in Colorado, and elsewhere in
 the United States. While most of these sources were not utilized directly in our data analysis, they offered reference points and are used in various
 calculations to simulate close-to-life conditions.
 
