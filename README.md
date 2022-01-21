@@ -2,8 +2,6 @@
 
 ## Second Segement - Status Update
 
-## PRESENTATION
-
 ### Selected Topic
 
 For this project, we will be working to create a comparison of ski resort locations across Montana. Our comparison will focus on snowfall levels, total
