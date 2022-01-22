@@ -1,3 +1,5 @@
+I CAN ADD NOTES
+
 # Ski Resort Analysis Final Project
 
 ## Second Segement - Status Update
