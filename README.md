@@ -131,19 +131,18 @@ additional transformations and tables can be created in order to isolate relevan
 Status - Warren will be working over the next week to create a Postgres database and set up the ERD. 
 
 ### Machine Learning Model - NLP
-## NLP Classification
+### NLP Classification
 
 The team is working to create an NLP (Natural Language processing) Model using average weather data, and text review data, to provide insights for optmization ski resorts experiences.
 
 #### Process
-*Collect text review data
-*Cleaning and creating a new dataframe
-*Nomalizing process
-*Tokenization 
-*Stop word removal
+* Collect text review data
+* Cleaning and creating a new dataframe
+* Nomalizing process
+* Tokenization 
+* Stop word removal
 
 For the data process we will use SpaCy, an annotation tool to enable a fast level of iteration to work on entity recognition and intent detection for language classification.
-
 
 ### Results (Provisional)
 
