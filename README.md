@@ -133,7 +133,7 @@ Status - Warren will be working over the next week to create a Postgres database
 ### Machine Learning Model - NLP
 ## NLP Classification
 
-Thwe team is working to create an NLP (Natural Language processing) Model using average weather data, and text review data, to provide insights for optmization ski resorts experiences.
+The team is working to create an NLP (Natural Language processing) Model using average weather data, and text review data, to provide insights for optmization ski resorts experiences.
 
 #### Process
 *Collect text review data
