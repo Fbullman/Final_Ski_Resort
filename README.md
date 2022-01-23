@@ -5,8 +5,9 @@
 ### Selected Topic
 
 For this project, we will be working to create a comparison of ski resort locations across Montana. Our comparison will focus on snowfall levels, total
-ski visits and review data gathered on the various resorts. We will be aiming to incorporate the data sources to predict future yearly ski visits at 
-resorts throughout the state.
+ski visits and review data gathered on the various resorts. We will be aiming to incorporate the data sources to visualize the correlations between the weather
+and review data for the resorts throughout the state.
+
 
 ### Reason Topic Was Selected
 
@@ -20,9 +21,10 @@ operations or profitability of the business.
 ### Business Connections 
 
 - Visitor projections would be useful to individual ski resorts to predict profit levels, staffing needs, set costs per ticket etc. 
-- The projections could also be useful from an investor standpoint, if say an individual is looking to invest in a ski resort, which one has the best outlook
+- The projections could also be useful from an investor standpoint, if say an individual is looking to invest in a ski resort, which one has the best outlook.
 - Projections can also be useful to the state government as a basis to promote recreation tourism in Montana. 
-- Does the data reveal any specifics as to how global warming is currently affecting the industry? What ramifications does this have?
+- Visualizations of the potential correlation between weather and review data can demonstrate the effect of weather on user experience.
+- Natural Language Processing model developed will identify key words frequently used in positive and negative reviews. This information could help resorts better understand the factors leading to a positive or negative user experience.
 
 ### Questions the Team Hopes to Answer 
 
@@ -30,6 +32,8 @@ Over the course of this project, the team will work to answer the following:
 
 - What are the historical snowfall levels for the ski resorts of interest? 
 - How do snowfall levels impact the number of ski resort visits in a given season? 
+- Is there a correlation between the weather and user experience?
+- What does the content of user reviews reveal as highly impactful in either a positive or negative expereince? 
 - How can we use both the review data and the weather to better understand how each affects attendance levels? 
 - Can we use this data to make accurate predictions regarding the number of ski visits at a given resort? 
 - What other recommendations can we offer to the resort?
@@ -75,11 +79,8 @@ is reliably recorded by stations beginning in the early 00's.
 
 Lastly, to expand on possible analysis opportunities, the team began to pull review data on each of the ski resorts. Websites such as TripAdvisor and 
 Yelp were identified as possible sources of data. Warren developed a web scraping code to pull review data from TripAdvisor. Fabiana identified a 
-previously data scrape of OnTheSnow.com, a website dedicated to planning ski trips. James worked to enter data from Yelp for each resort needed. As
-the site does not allow for scraping, the data was manually compiled. 
+previously data scrape of OnTheSnow.com, a website dedicated to planning ski trips. James worked to enter data from Yelp for each resort needed.
 
-Furhter opportunties for review data include Google Reviews which offers an API to pull data. By Friday, James will have worked to compile and upload
-the Google Review Data.
 
 ### Description of the Analysis Phase 
 
@@ -103,14 +104,11 @@ to the resort. The best fitting station was then recorded.
 Once recorded, each station was serached in the NOAA website to request the data for each station. Each station's weather records were then reviewed to
 determine whether they cover the entrie period of interest. Following this, six resorts with full data were identified, Bridger, Discovery, Red Lodge,
 Showdown, Snowbowl and Whitefish. These locations also represent the four regions of Montana that host ski resorts. Therefore, we feel that these
-resorts offer a strong representation of resorts in teh state.
+resorts offer a strong representation of resorts in the state.
 
-Futher data analysis will be needed of the weather data. By this weekend (1/21 to 1/23), the team will identify a plan to clean the weather data and
-identify the most useable metrics for measuring snow. The data will also need to filtered to only focus on the ski season. In Montana it is generally between
-November and April.
+Looking at this upcoming week, James will work to combine and finalize the cleaning of all review and weather data. The review data compiled will need to be combined, classified and have any null values removed. The weather data will need to be filtered (to only focus on the ski season, November to April) and then averages of temperature and snowfall levels can be taken for each month. Once these calculations have been made, they will need to be added in one master spreadsheet.
 
-Lastly, the review data pulled from various websites will need to be combined and cleaned to facilitate the machine learning model. Fabiana will be
-working to combine the data sources and identify data needed to proceed with the NLP model. 
+James can also work to create a GeoJSON map of the ski resorts and the weather data collection center where the measurements were captured. 
 
 ### Slide Deck 
 
@@ -119,7 +117,7 @@ current progress.
 
 https://docs.google.com/presentation/d/1go-QYN6CNEwFXcEdnOdftVuREbx8iUtQk8BwkA_2T6s/edit?usp=sharing 
 
-By the end of the weekend (1/23) the team will have updated the slide deck with information regarding their respective portions.
+During the upcoming week, the team will have updated the slide deck with information regarding their respective portions.
 
 ### Database Integration
 
@@ -130,22 +128,13 @@ additional transformations and tables can be created in order to isolate relevan
 
 Status - Warren will be working over the next week to create a Postgres database and set up the ERD. 
 
-### Machine Learning Model - NLP
-### NLP Classification
+### Machine Learning Model - Natural Language Processing
 
-The NLP Machine Learning model was completed usining PySpark.
+For our Machine Learning model, the team is working to analyze the text of individual reviews with Natural Language Processing (NLP). Using PySpark and Google Collab, James has imported the TripAdvisor review data, created a pipeline which completes the tokenization, stop word removal, the TF-IDF and vectorization of the data. The data has also been run through a fuctional NLP model which predicts whether a review is positive or negative based on the content of the review text. 
 
+Looking forward to this next week, James will need to add a prepared spreadsheet containing all reviews compiled and run the data through the model to better refine the results. Currently, the model is predicting with 50% accuarcy with only the TripAdvisor data. 
 
-The team is working to create an NLP (Natural Language processing) Model using average weather data, and text review data, to provide insights for optmization ski resorts experiences.
-
-#### Process
-* Collect text review data
-* Cleaning and creating a new dataframe
-* Nomalizing process
-* Tokenization 
-* Stop word removal
-
-For the data process we will use SpaCy, an annotation tool to enable a fast level of iteration to work on entity recognition and intent detection for language classification.
+Additionally, James would like to create two spreadsheets with the review data, one with positive only review and one with only negative reviews. The spreadsheets can then be tokenized with SpaCy, and subsequently counted to demonstrate which words appear most frequently in positive and negative reviews.
 
 ### Results (Provisional)
 
@@ -153,6 +142,7 @@ Results will be presented using Tableau in order to demonstrate and relay import
 
 Looking to next weekend (1/28 to 1/30) the team will work to begin importing data into Tableau and creating visualizations that reflect the analysis
 completed.
+
 
 ### The Team 
 
