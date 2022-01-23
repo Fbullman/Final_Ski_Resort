@@ -146,6 +146,8 @@ The team is working to create an NLP (Natural Language processing) Model using a
 
 For the data process we will use SpaCy, an annotation tool to enable a fast level of iteration to work on entity recognition and intent detection for language classification.
 
+PySpark was also attemped to perform the NLP model. When running the pipeline, the application throws an error. Attemping troubleshooting.
+
 ### Results (Provisional)
 
 Results will be presented using Tableau in order to demonstrate and relay important findings to leadership at the ski resort. 
