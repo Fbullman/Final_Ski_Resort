@@ -1,5 +1,3 @@
-I CAN ADD NOTES
-
 # Ski Resort Analysis Final Project
 
 ## Second Segement - Status Update
@@ -135,6 +133,9 @@ Status - Warren will be working over the next week to create a Postgres database
 ### Machine Learning Model - NLP
 ### NLP Classification
 
+The NLP Machine Learning model was completed usining PySpark.
+
+
 The team is working to create an NLP (Natural Language processing) Model using average weather data, and text review data, to provide insights for optmization ski resorts experiences.
 
 #### Process
@@ -145,8 +146,6 @@ The team is working to create an NLP (Natural Language processing) Model using a
 * Stop word removal
 
 For the data process we will use SpaCy, an annotation tool to enable a fast level of iteration to work on entity recognition and intent detection for language classification.
-
-PySpark was also attemped to perform the NLP model. When running the pipeline, the application throws an error. Attemping troubleshooting.
 
 ### Results (Provisional)
 
