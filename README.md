@@ -130,11 +130,11 @@ Status - Warren will be working over the next week to create a Postgres database
 
 ### Machine Learning Model - Natural Language Processing
 
-For our Machine Learning model, the team is working to analyze the text of individual reviews with Natural Language Processing (NLP). Using PySpark and Google Collab, James has imported the TripAdvisor review data, created a pipeline which completes the tokenization, stop word removal, the TF-IDF and vectorization of the data. The data has also been run through a fuctional NLP model which predicts whether a review is positive or negative based on the content of the review text. 
+For our Machine Learning model, the team is working to analyze the text of individual reviews with Natural Language Processing (NLP). Using PySpark and Google Collab, James has imported the combined review data, created a pipeline which completes the tokenization, stop word removal, the TF-IDF and vectorization of the data. The data has also been run through a fuctional NLP model which predicts whether a review is positive or negative based on the content of the review text. 
 
-Looking forward to this next week, James will need to add a prepared spreadsheet containing all reviews compiled and run the data through the model to better refine the results. Currently, the model is predicting with 50% accuarcy with only the TripAdvisor data. 
+Ultimately, the NLP model created is currently at 50% accuracy in predicting whether the review text is positive or negative. Ideas for further evaluation with this model could be provide the model with additional reviews to facilitate further calibration of the model.
 
-Additionally, James would like to create two spreadsheets with the review data, one with positive only review and one with only negative reviews. The spreadsheets can then be tokenized with SpaCy, and subsequently counted to demonstrate which words appear most frequently in positive and negative reviews.
+Looking forward, James would like to create two spreadsheets with the review data, one with positive only review and one with only negative reviews. The spreadsheets can then be tokenized with SpaCy, and subsequently counted to demonstrate which words appear most frequently in positive and negative reviews.
 
 ### Results (Provisional)
 
