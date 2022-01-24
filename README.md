@@ -121,6 +121,8 @@ During the upcoming week, the team will have updated the slide deck with informa
 
 ### Database Integration
 
+<img width="468" alt="FInal_Project_ERD" src="https://user-images.githubusercontent.com/89553690/150780145-d52f0288-d62b-4cbf-a851-5102c2a90476.png">
+
 After extracting the weather data, the ski resort vistor data and review data, it wil be cleaned the using Jupyter Notebook (Python and Pandas), 
 the data will then be stored in a PostgreSQL database. This will allow for storage and compilation as the data is being extracted (year-by-year 
 and month-by-month). Additionally, the results from the machine learning model can be stored in the SQL database. Further, once data has been imported, 
