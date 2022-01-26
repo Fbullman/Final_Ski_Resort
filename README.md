@@ -150,6 +150,8 @@ After the data has been run through the pipeline, it is ready for the NLP machin
 
 Using the Binary Classification Evaluator, the prediction and length values are compared to produce an accuracy score. Ultimately, the NLP model created is currently at 50% accuracy in predicting whether the review text is positive or negative. 
 
+IMAGE 4
+
 In its current state, the model is not ready for deployment as the accuracy level is relatively low. To further develop the model, additional soruces of review data could be inputted. This could provide the model with additional data to make better predictions and further refine the model. 
 
 Another possibility is that the word choices between positive and negative reviews could be neglible. To futher evaluate this possibility, the reviews were split into two separate spreadsheets, one containing only positive reviews and others containing only negative. Using Google Collaboratory the reviews were imported and using SpaCy, the review text was tokenized. Using a word counting function, the individual tokens were counted. Then, with Pandas, the word counts were put into a dataframe and exported for further evaluation.
