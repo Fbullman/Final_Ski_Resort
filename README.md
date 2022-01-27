@@ -134,23 +134,26 @@ Status - Warren will be working over the next week to create a Postgres database
 
 For our Machine Learning model, the team utilized Natural Language Processing (NLP) to analyze the text of the individual ski resort reviews. To prepare the data for NLP, the review data from all sources, TripAdvisor, On the Snow and Yelp, was combined using Pandas. Then, the reviews were classified as either positive or negative. Positive reviews were considered either 4 or 5 stars. Negative reviews as 3 stars or less. Then, using PySpark and Google Collaboratory, the combined data was imported. From here, the dataframe was filtered to only reflect the positive or negative classification and the review text. 
 
-IMAGE 1 HERE
+<img width="319" alt="length" src="https://user-images.githubusercontent.com/89322009/151275662-2523d363-5866-4cbe-8fba-1cb3bcefc403.png">
+
 
 The next step in the analysis is to import the functions required to build the NLP pipeline. The fuctions utilized are length, Tokenizer, StopWordsRemover, HasingTF, IDF and StringIndexer. First, we use the length function to length fuction to count the number of words in each review. Once done, NA rows are dropped as any null rows will cause errors when running the TF-IDF. 
 
-IMAGE 2 HERE
+<img width="296" alt="nlp_dataframe" src="https://user-images.githubusercontent.com/89322009/151275696-2fb7c089-1f15-4db2-860e-5508740db289.png">
+
 
 Once done, we are ready to begin building the Pipeline needed to process the data in the NLP model. Essentially, each fuction serves a purpose and creates an output which will be used in the following function. The StringIndexer takes the class (positive or negative) and returns a 0, for positive or a 1 for negative. The tokenizer breaks each review down into a list of indiviual words. For example, "I enjoy data analytics." becomes I, enjoy, data, analytics,. StopRemover takes the tokenized data and removes certain words. These are words such as, "the", "than", 'what", "where" "why", etc. These are words that do not hold any significance to the overall sentiment of the review. 
 
-With the tokens created and stop words removed, the tokens were converted to numbers so that they can be run through the TF-IDF model. This was accompished through hashing, which assigns an ID to each unique word. It is then mapped to an index and counted with a vector being returned. The Term Frequency - Inverse Document Frequency, or TF-IDF, measures the significance of a words in a review against the larger set of reviews. The term frequency multiplied by the inverse document frequency provides the TD-IDF value. Lastly, this value is inputed into a vectorization feeature which combines the length and the TF-IDF values to trian the machine learning model. 
+With the tokens created and stop words removed, the tokens were converted to numbers so that they can be run through the TF-IDF model. This was accompished through hashing, which assigns an ID to each unique word. It is then mapped to an index and counted with a vector being returned. The Term Frequency - Inverse Document Frequency, or TF-IDF, measures the significance of a words in a review against the larger set of reviews. The term frequency multiplied by the inverse document frequency provides the TD-IDF value. Lastly, this value is inputed into a vectorization feature which combines the length and the TF-IDF values to trian the machine learning model. 
 
-IMAGE 3 HERE
+<img width="1107" alt="pipeline" src="https://user-images.githubusercontent.com/89322009/151275738-fbb3f532-0784-4ed1-bb26-abbba5cd272c.png">
 
 After the data has been run through the pipeline, it is ready for the NLP machine learning model. The data is randomly split 70/30 to train and test the model. The machine learning model used is Naive Bayes. This is a classifer algorithm which determines the probability of an event based on new information related to the event. Here, the model is predicting whether a review will be classifed as positive or negative based on the review text. After running the model, a new prediction column is created, denoting either 0 (positive) or 1 (negative). 
 
 Using the Binary Classification Evaluator, the prediction and length values are compared to produce an accuracy score. Ultimately, the NLP model created is currently at 50% accuracy in predicting whether the review text is positive or negative. 
 
-IMAGE 4
+<img width="933" alt="nlp_prediction" src="https://user-images.githubusercontent.com/89322009/151275778-e062db8d-ce5d-4736-9427-6fc4fc7447b7.png">
+
 
 In its current state, the model is not ready for deployment as the accuracy level is relatively low. To further develop the model, additional soruces of review data could be inputted. This could provide the model with additional data to make better predictions and further refine the model. 
 
