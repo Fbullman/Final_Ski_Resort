@@ -162,6 +162,10 @@ Another possibility is that the word choices between positive and negative revie
 ### Results (Provisional)
 
 Results will be presented using Tableau in order to demonstrate and relay important findings to leadership at the ski resort. 
+Image bellow demonstrate results of ML model Sentimental analysis
+
+![Screenshot (315)](https://user-images.githubusercontent.com/88170636/151276028-8372d1ef-1846-4d67-806b-6506c79f1162.png)
+
 
 Looking to next weekend (1/28 to 1/30) the team will work to begin importing data into Tableau and creating visualizations that reflect the analysis
 completed.
