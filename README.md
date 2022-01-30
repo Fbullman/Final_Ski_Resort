@@ -68,6 +68,8 @@ source data collected by the University of Montana on the annual ski visits to s
 scare, only listing the year, the resort and the amount of visitors. In an attempt to remedy this, Fabiana worked to reach out to various resorts
 to obtain furhter data. To date, no fruitful responses to these requests have been received.
 
+<img width="573" alt="vail_contact" src="https://user-images.githubusercontent.com/89322009/151720002-63f4933a-cb02-4c7a-8b4e-30c057579bfa.png">
+
 With the visitor data in hand, the team was then able to progress in identifying factors that would impact the amount of visitors a ski resort received
 in a given year. To this end, weather, or more specifically snow, would be a logical influence on the amount of skiers a resort receives. The thought 
 being, the more fresh snow, the more appealing the resort. For the weather data, the National Oceanic and Atmospheric Administration presented as a 
@@ -79,7 +81,7 @@ is reliably recorded by stations beginning in the early 00's.
 
 Lastly, to expand on possible analysis opportunities, the team began to pull review data on each of the ski resorts. Websites such as TripAdvisor and 
 Yelp were identified as possible sources of data. Warren developed a web scraping code to pull review data from TripAdvisor. Fabiana identified a 
-previously data scrape of OnTheSnow.com, a website dedicated to planning ski trips. James worked to enter data from Yelp for each resort needed.
+previously data scrape of OnTheSnow.com, a website dedicated to planning ski trips. James worked to collect data from Yelp for each resort needed.
 
 
 ### Description of the Analysis Phase 
@@ -106,7 +108,11 @@ determine whether they cover the entrie period of interest. Following this, six 
 Showdown, Snowbowl and Whitefish. These locations also represent the four regions of Montana that host ski resorts. Therefore, we feel that these
 resorts offer a strong representation of resorts in the state.
 
-Looking at this upcoming week, James will work to combine and finalize the cleaning of all review and weather data. The review data compiled will need to be combined, classified and have any null values removed. The weather data will need to be filtered (to only focus on the ski season, November to April) and then averages of temperature and snowfall levels can be taken for each month. Once these calculations have been made, they will need to be added in one master spreadsheet.
+Next, James worked to connect the visitor, weather and review data in a manner that facilitated statistical analysis and visualization. The first step was to filter the data and remove any weather data that did not occur during the ski season. The opening and closing dates for each resort vary. From the research, ski resorts tend to open after Thanksgiving and close sometime in early to mid April. To ensure that only relevant weather data was reviewed, the data was filtered to only include data for the months between December and March. 
+
+Once filtered, James created season averages for each resort, including snow depth and temperature maximums, minimums and averages. With the season averages collected, the data was combined with the ski visitor data for each resort. Additionally, the season averages were also combined with the review data, so that each review lines up with the typical weather experienced that season.
+
+Looking at this upcoming week, James will work to perform statistical analysis on the combined data sources. The goal will be to perform multiple regression analysis and determine which weather conditions have the largest impact on a review or the number of visitors.
 
 James can also work to create a GeoJSON map of the ski resorts and the weather data collection center where the measurements were captured. 
 
@@ -117,7 +123,7 @@ current progress.
 
 https://docs.google.com/presentation/d/1go-QYN6CNEwFXcEdnOdftVuREbx8iUtQk8BwkA_2T6s/edit?usp=sharing 
 
-During the upcoming week, the team will have updated the slide deck with information regarding their respective portions.
+Currently, Fabiana has updated the slides with the current work completed. During the upcoming week, the team will have updated the slide deck with information regarding their respective portions.
 
 ### Database Integration
 
@@ -128,7 +134,7 @@ the data will then be stored in a PostgreSQL database. This will allow for stora
 and month-by-month). Additionally, the results from the machine learning model can be stored in the SQL database. Further, once data has been imported, 
 additional transformations and tables can be created in order to isolate relevant data and export it for further use.
 
-Status - Warren will be working over the next week to create a Postgres database and set up the ERD. 
+Over the next week, Warren will continue to store datasets compiled and update the ERD with further connections.
 
 ### Machine Learning Model - Natural Language Processing
 
@@ -167,8 +173,9 @@ Image bellow demonstrate results of ML model Sentimental analysis
 ![Screenshot (315)](https://user-images.githubusercontent.com/88170636/151276028-8372d1ef-1846-4d67-806b-6506c79f1162.png)
 
 
-Looking to next weekend (1/28 to 1/30) the team will work to begin importing data into Tableau and creating visualizations that reflect the analysis
-completed.
+Fabiana has begun working with Tableau and has set up a dashboard as she works to create visualizations with the data collected. Over the next week, she will continue to work on the visualizations. 
+
+Together, the team will be updating the slide deck and brainstorming a storyboard to present the analysis completed and present a cohesive conclusion to the ski resorts.
 
 
 ### The Team 
