@@ -188,11 +188,11 @@ The trend of sum of Visits for Years.  Color shows details about Resort. The dat
 
 * Negative words
 * The trend of sum of Visits for Years.  Color shows details about Resort. The data is filtered on Word 
-(top_positive_words), which keeps parking, time, reasonable, and small. The view is filtered on sum of Visits, which keeps all values.
+(top_negative_words), which keeps parking, time, reasonable, and small. The view is filtered on sum of Visits, which keeps all values.
 
-![Trend of sum of visits for years negative words](https://user-images.githubusercontent.com/88170636/151736152-df392bb4-8b1e-45ad-b7ca-efed72e132fb.png)
+![Trend of sum of visits for years negative words](https://user-images.githubusercontent.com/88170636/151739618-61b3a436-b09b-4972-9394-3af4bb93e07d.png)
 
-Results will be presented using Tableau in order to demonstrate and relay important findings to leadership at the ski resort. 
+
 Image bellow demonstrate results of ML model Sentimental analysis
 
 ![Screenshot (315)](https://user-images.githubusercontent.com/88170636/151276028-8372d1ef-1846-4d67-806b-6506c79f1162.png)
