@@ -68,6 +68,8 @@ source data collected by the University of Montana on the annual ski visits to s
 scare, only listing the year, the resort and the amount of visitors. In an attempt to remedy this, Fabiana worked to reach out to various resorts
 to obtain furhter data. To date, no fruitful responses to these requests have been received.
 
+<img width="573" alt="vail_contact" src="https://user-images.githubusercontent.com/89322009/151720002-63f4933a-cb02-4c7a-8b4e-30c057579bfa.png">
+
 With the visitor data in hand, the team was then able to progress in identifying factors that would impact the amount of visitors a ski resort received
 in a given year. To this end, weather, or more specifically snow, would be a logical influence on the amount of skiers a resort receives. The thought 
 being, the more fresh snow, the more appealing the resort. For the weather data, the National Oceanic and Atmospheric Administration presented as a 
@@ -79,7 +81,7 @@ is reliably recorded by stations beginning in the early 00's.
 
 Lastly, to expand on possible analysis opportunities, the team began to pull review data on each of the ski resorts. Websites such as TripAdvisor and 
 Yelp were identified as possible sources of data. Warren developed a web scraping code to pull review data from TripAdvisor. Fabiana identified a 
-previously data scrape of OnTheSnow.com, a website dedicated to planning ski trips. James worked to enter data from Yelp for each resort needed.
+previously data scrape of OnTheSnow.com, a website dedicated to planning ski trips. James worked to collect data from Yelp for each resort needed.
 
 
 ### Description of the Analysis Phase 
@@ -106,7 +108,11 @@ determine whether they cover the entrie period of interest. Following this, six 
 Showdown, Snowbowl and Whitefish. These locations also represent the four regions of Montana that host ski resorts. Therefore, we feel that these
 resorts offer a strong representation of resorts in the state.
 
-Looking at this upcoming week, James will work to combine and finalize the cleaning of all review and weather data. The review data compiled will need to be combined, classified and have any null values removed. The weather data will need to be filtered (to only focus on the ski season, November to April) and then averages of temperature and snowfall levels can be taken for each month. Once these calculations have been made, they will need to be added in one master spreadsheet.
+Next, James worked to connect the visitor, weather and review data in a manner that facilitated statistical analysis and visualization. The first step was to filter the data and remove any weather data that did not occur during the ski season. The opening and closing dates for each resort vary. From the research, ski resorts tend to open after Thanksgiving and close sometime in early to mid April. To ensure that only relevant weather data was reviewed, the data was filtered to only include data for the months between December and March. 
+
+Once filtered, James created season averages for each resort, including snow depth and temperature maximums, minimums and averages. With the season averages collected, the data was combined with the ski visitor data for each resort. Additionally, the season averages were also combined with the review data, so that each review lines up with the typical weather experienced that season.
+
+Looking at this upcoming week, James will work to perform statistical analysis on the combined data sources. The goal will be to perform multiple regression analysis and determine which weather conditions have the largest impact on a review or the number of visitors.
 
 James can also work to create a GeoJSON map of the ski resorts and the weather data collection center where the measurements were captured. 
 
@@ -117,28 +123,52 @@ current progress.
 
 https://docs.google.com/presentation/d/1go-QYN6CNEwFXcEdnOdftVuREbx8iUtQk8BwkA_2T6s/edit?usp=sharing 
 
-During the upcoming week, the team will have updated the slide deck with information regarding their respective portions.
+Currently, Fabiana has updated the slides with the current work completed. During the upcoming week, the team will have updated the slide deck with information regarding their respective portions.
 
 ### Database Integration
 
-<img width="468" alt="FInal_Project_ERD" src="https://user-images.githubusercontent.com/89553690/150780145-d52f0288-d62b-4cbf-a851-5102c2a90476.png">
+![Final_Ski_Resort_Project_Second_Segment](https://user-images.githubusercontent.com/89553690/151721807-6f2fadf4-d3dc-4368-aef2-6f7d71dd5ab8.png)
+
+<img width="1000" alt="Data Dictionary" src="https://user-images.githubusercontent.com/89553690/151721695-5eafb412-d91c-42f1-9967-a15cdbd00c93.png">
 
 After extracting the weather data, the ski resort vistor data and review data, it wil be cleaned the using Jupyter Notebook (Python and Pandas), 
 the data will then be stored in a PostgreSQL database. This will allow for storage and compilation as the data is being extracted (year-by-year 
 and month-by-month). Additionally, the results from the machine learning model can be stored in the SQL database. Further, once data has been imported, 
 additional transformations and tables can be created in order to isolate relevant data and export it for further use.
 
-Status - Warren will be working over the next week to create a Postgres database and set up the ERD. 
+Over the next week, Warren will continue to store datasets compiled and update the ERD with further connections.
 
 ### Machine Learning Model - Natural Language Processing
 
-For our Machine Learning model, the team is working to analyze the text of individual reviews with Natural Language Processing (NLP). Using PySpark and Google Collab, James has imported the combined review data, created a pipeline which completes the tokenization, stop word removal, the TF-IDF and vectorization of the data. The data has also been run through a fuctional NLP model which predicts whether a review is positive or negative based on the content of the review text. 
+For our Machine Learning model, the team utilized Natural Language Processing (NLP) to analyze the text of the individual ski resort reviews. To prepare the data for NLP, the review data from all sources, TripAdvisor, On the Snow and Yelp, was combined using Pandas. Then, the reviews were classified as either positive or negative. Positive reviews were considered either 4 or 5 stars. Negative reviews as 3 stars or less. Then, using PySpark and Google Collaboratory, the combined data was imported. From here, the dataframe was filtered to only reflect the positive or negative classification and the review text. 
 
-Ultimately, the NLP model created is currently at 50% accuracy in predicting whether the review text is positive or negative. Ideas for further evaluation with this model could be provide the model with additional reviews to facilitate further calibration of the model.
+<img width="319" alt="length" src="https://user-images.githubusercontent.com/89322009/151275662-2523d363-5866-4cbe-8fba-1cb3bcefc403.png">
 
-Looking forward, James would like to create two spreadsheets with the review data, one with positive only review and one with only negative reviews. The spreadsheets can then be tokenized with SpaCy, and subsequently counted to demonstrate which words appear most frequently in positive and negative reviews.
+
+The next step in the analysis is to import the functions required to build the NLP pipeline. The fuctions utilized are length, Tokenizer, StopWordsRemover, HasingTF, IDF and StringIndexer. First, we use the length function to length fuction to count the number of words in each review. Once done, NA rows are dropped as any null rows will cause errors when running the TF-IDF. 
+
+<img width="296" alt="nlp_dataframe" src="https://user-images.githubusercontent.com/89322009/151275696-2fb7c089-1f15-4db2-860e-5508740db289.png">
+
+
+Once done, we are ready to begin building the Pipeline needed to process the data in the NLP model. Essentially, each fuction serves a purpose and creates an output which will be used in the following function. The StringIndexer takes the class (positive or negative) and returns a 0, for positive or a 1 for negative. The tokenizer breaks each review down into a list of indiviual words. For example, "I enjoy data analytics." becomes I, enjoy, data, analytics,. StopRemover takes the tokenized data and removes certain words. These are words such as, "the", "than", 'what", "where" "why", etc. These are words that do not hold any significance to the overall sentiment of the review. 
+
+With the tokens created and stop words removed, the tokens were converted to numbers so that they can be run through the TF-IDF model. This was accompished through hashing, which assigns an ID to each unique word. It is then mapped to an index and counted with a vector being returned. The Term Frequency - Inverse Document Frequency, or TF-IDF, measures the significance of a words in a review against the larger set of reviews. The term frequency multiplied by the inverse document frequency provides the TD-IDF value. Lastly, this value is inputed into a vectorization feature which combines the length and the TF-IDF values to trian the machine learning model. 
+
+<img width="1107" alt="pipeline" src="https://user-images.githubusercontent.com/89322009/151275738-fbb3f532-0784-4ed1-bb26-abbba5cd272c.png">
+
+After the data has been run through the pipeline, it is ready for the NLP machine learning model. The data is randomly split 70/30 to train and test the model. The machine learning model used is Naive Bayes. This is a classifer algorithm which determines the probability of an event based on new information related to the event. Here, the model is predicting whether a review will be classifed as positive or negative based on the review text. After running the model, a new prediction column is created, denoting either 0 (positive) or 1 (negative). 
+
+Using the Binary Classification Evaluator, the prediction and length values are compared to produce an accuracy score. Ultimately, the NLP model created is currently at 50% accuracy in predicting whether the review text is positive or negative. 
+
+<img width="933" alt="nlp_prediction" src="https://user-images.githubusercontent.com/89322009/151275778-e062db8d-ce5d-4736-9427-6fc4fc7447b7.png">
+
+
+In its current state, the model is not ready for deployment as the accuracy level is relatively low. To further develop the model, additional soruces of review data could be inputted. This could provide the model with additional data to make better predictions and further refine the model. 
+
+Another possibility is that the word choices between positive and negative reviews could be neglible. To futher evaluate this possibility, the reviews were split into two separate spreadsheets, one containing only positive reviews and others containing only negative. Using Google Collaboratory the reviews were imported and using SpaCy, the review text was tokenized. Using a word counting function, the individual tokens were counted. Then, with Pandas, the word counts were put into a dataframe and exported for further evaluation.
 
 ### Results (Provisional)
+
 
 This image shows the ML sentiment analysis (by ski resort and review site)
 ![Sentiment analysis posi_neg_site](https://user-images.githubusercontent.com/88170636/151736324-1984d63b-76b7-49b7-92c7-1a5d4d54664f.png)
@@ -161,6 +191,16 @@ The trend of sum of Visits for Years.  Color shows details about Resort. The dat
 (top_positive_words), which keeps parking, time, reasonable, and small. The view is filtered on sum of Visits, which keeps all values.
 
 ![Trend of sum of visits for years negative words](https://user-images.githubusercontent.com/88170636/151736152-df392bb4-8b1e-45ad-b7ca-efed72e132fb.png)
+
+Results will be presented using Tableau in order to demonstrate and relay important findings to leadership at the ski resort. 
+Image bellow demonstrate results of ML model Sentimental analysis
+
+![Screenshot (315)](https://user-images.githubusercontent.com/88170636/151276028-8372d1ef-1846-4d67-806b-6506c79f1162.png)
+
+
+Fabiana has begun working with Tableau and has set up a dashboard as she works to create visualizations with the data collected. Over the next week, she will continue to work on the visualizations. 
+
+Together, the team will be updating the slide deck and brainstorming a storyboard to present the analysis completed and present a cohesive conclusion to the ski resorts.
 
 
 ### The Team 
