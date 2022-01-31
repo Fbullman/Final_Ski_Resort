@@ -140,10 +140,12 @@ Looking forward, James would like to create two spreadsheets with the review dat
 
 ### Results (Provisional)
 
-Results will be presented using Tableau in order to demonstrate and relay important findings to leadership at the ski resort. 
-
-This image shows the Ml sentiment analysis (by ski resort and review site)
+This image shows the ML sentiment analysis (by ski resort and review site)
 ![Sentiment analysis posi_neg_site](https://user-images.githubusercontent.com/88170636/151736324-1984d63b-76b7-49b7-92c7-1a5d4d54664f.png)
+
+The plot image ilutrates, positive and negative words as a result from the ML- Natural Language processing model 
+![newplot](https://user-images.githubusercontent.com/88170636/151737174-f12e63ea-4b9d-46c7-8529-a9be8f6ae15b.png)
+
 
 The images bellow demonstrate the trend of visits for years filtered by positive and negative words used in the visitors reviews texts.
 
@@ -166,3 +168,6 @@ The trend of sum of Visits for Years.  Color shows details about Resort. The dat
 - Fabiana Ullman
 - Warren D. Kelly Jr.
 - James Stawarz
+
+![MONTANA_final](https://user-images.githubusercontent.com/88170636/151737200-33f812df-7b28-4cc5-92ff-7f5c7e0c56a6.png)
+
