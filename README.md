@@ -142,8 +142,23 @@ Looking forward, James would like to create two spreadsheets with the review dat
 
 Results will be presented using Tableau in order to demonstrate and relay important findings to leadership at the ski resort. 
 
-Looking to next weekend (1/28 to 1/30) the team will work to begin importing data into Tableau and creating visualizations that reflect the analysis
-completed.
+This image shows the Ml sentiment analysis (by ski resort and review site)
+![Sentiment analysis posi_neg_site](https://user-images.githubusercontent.com/88170636/151736324-1984d63b-76b7-49b7-92c7-1a5d4d54664f.png)
+
+The images bellow demonstrate the trend of visits for years filtered by positive and negative words used in the visitors reviews texts.
+
+* Positive words
+The trend of sum of Visits for Years.  Color shows details about Resort. The data is filtered on Word 
+(top_positive_words), which keeps awesome, excellent, great and wonderful. The view is filtered on sum of Visits, which keeps all values.
+
+![Trend_sum_positive_words](https://user-images.githubusercontent.com/88170636/151736058-1bbc9fd1-1d6c-45a7-8b2f-32e135e27e4d.png)
+
+
+* Negative words
+* The trend of sum of Visits for Years.  Color shows details about Resort. The data is filtered on Word 
+(top_positive_words), which keeps parking, time, reasonable, and small. The view is filtered on sum of Visits, which keeps all values.
+
+![Trend of sum of visits for years negative words](https://user-images.githubusercontent.com/88170636/151736152-df392bb4-8b1e-45ad-b7ca-efed72e132fb.png)
 
 
 ### The Team 
