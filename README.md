@@ -90,10 +90,6 @@ Beginning with the ski visitor data, a new dataset listing each of the ski resor
 the resorts to facilitate data connections later on. Further the list of resorts was updates with coordinate information taken from Wikipedia, and 
 cross referenced with a region map of the state. 
 
-Potential opportunities to analyze this data include creating yearly averages of ski visit data across the state, and for each region. The data points
-themselves can also be graphed to visualize the data. Comparisons of each resort of interest vs. the rest of the resorts in the state could be benfical
-in identifying trends. James can begin working on graphing this data this weekened (1/21 to 1/23).
-
 Otherwise, the data is fairly clean to begin with. In fact, furhter additions to this data could be helpful to gain furhter insight. The data however
 can and should be filtered down to only reflect the resorts of interest. On this, when viewing the data, certain resorts do not make for good analysis
 subjects. For instance, the Marshall ski resort closed in 2003. Therefore, further analysis can be excluded for this resort.
@@ -102,6 +98,8 @@ Beginning with the weather data, the first challenge presented is determining wh
 of the weather data for Montana from 1988, James created a list of weather stations and their coordinates. From there, the coordinates of the weather
 stations were compared with the coordinates of the ski resorts. Filtering the data, allowed to create a subset of the stations that are located close
 to the resort. The best fitting station was then recorded. 
+
+![montana_resorts_stations](https://user-images.githubusercontent.com/89322009/152010932-2fda6236-0d18-4f65-ab24-bd724e4e210f.png)
 
 Once recorded, each station was serached in the NOAA website to request the data for each station. Each station's weather records were then reviewed to
 determine whether they cover the entrie period of interest. Following this, six resorts with full data were identified, Bridger, Discovery, Red Lodge,
@@ -112,9 +110,17 @@ Next, James worked to connect the visitor, weather and review data in a manner t
 
 Once filtered, James created season averages for each resort, including snow depth and temperature maximums, minimums and averages. With the season averages collected, the data was combined with the ski visitor data for each resort. Additionally, the season averages were also combined with the review data, so that each review lines up with the typical weather experienced that season.
 
-Looking at this upcoming week, James will work to perform statistical analysis on the combined data sources. The goal will be to perform multiple regression analysis and determine which weather conditions have the largest impact on a review or the number of visitors.
+Using R, correlation matricies were created to demonstrate the relationship between yearly visits and review ratings against average weather statistics. To accomplish this, cleaned datasets were needed that removed any N/A values, such as if a ski resort did not have snow depth results for a particular year. The tables were then imported to R for analysis. 
 
-James can also work to create a GeoJSON map of the ski resorts and the weather data collection center where the measurements were captured. 
+<img width="714" alt="weather_correlation_matrix" src="https://user-images.githubusercontent.com/89322009/152011632-9ff4c175-ea67-4093-9989-f811ee89fd01.png">
+
+For yearly visits and weather averages, the strongest relationship was between average snow depth (-.576) and yearly visits. This r value indicates a moderate negative correlation between the two variables. This would suggest that as yearly visits increase, the snow depth decreases. Looking at the linear regression of these variables, the r-squared value is calculated to be .3319, which would indicate the about 33% of the variability in yearly visits is explained by the model. Additionally, the p-value calculated 6.842e-11, is less than the assumed .05 significance level. Therefore, we can state that the slope of our linear model is not zero.
+
+<img width="457" alt="snow_depth_linear_regression" src="https://user-images.githubusercontent.com/89322009/152013021-67704316-6e4a-4251-916b-7f23a057ef71.png">
+
+Regarding the correlation analysis of the weather and the ratings, no weather variables presented a strong correlation on the rating data. From this analysis we can state that there is not a significant correlation between the weather averages and the collected ratings data. 
+
+<img width="740" alt="rating_correlation_matrix" src="https://user-images.githubusercontent.com/89322009/152014051-9ecdf01a-6805-4c6f-a7c2-91703005b3fc.png">
 
 ### Slide Deck 
 
