@@ -33,7 +33,7 @@ Over the course of this project, the team will work to answer the following:
 - What are the historical snowfall levels for the ski resorts of interest? 
 - How do snowfall levels impact the number of ski resort visits in a given season? 
 - Is there a correlation between the weather and user experience?
-- What does the content of user reviews reveal as highly impactful in either a positive or negative expereince? 
+- What does the content of user reviews reveal as highly impactful in either a positive or negative experience? 
 - How can we use both the review data and the weather to better understand how each affects attendance levels? 
 - Can we use this data to make accurate predictions regarding the number of ski visits at a given resort? 
 - What other recommendations can we offer to the resort?
