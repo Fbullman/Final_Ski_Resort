@@ -127,9 +127,9 @@ Currently, Fabiana has updated the slides with the current work completed. Durin
 
 ### Database Integration
 
-![Final_Ski_Resort_Project_Second_Segment](https://user-images.githubusercontent.com/89553690/151721807-6f2fadf4-d3dc-4368-aef2-6f7d71dd5ab8.png)
+![Final_Ski_Resort_Project](https://user-images.githubusercontent.com/89553690/151897449-496c7082-dae2-41bf-9870-efcbe96304e6.png)
 
-<img width="1000" alt="Data Dictionary" src="https://user-images.githubusercontent.com/89553690/151721695-5eafb412-d91c-42f1-9967-a15cdbd00c93.png">
+<img width="1000" alt="data_dictionary" src="https://user-images.githubusercontent.com/89553690/151897457-8c3debb5-f282-4bb7-a9d0-d7c900b4b7b9.png">
 
 After extracting the weather data, the ski resort vistor data and review data, it wil be cleaned the using Jupyter Notebook (Python and Pandas), 
 the data will then be stored in a PostgreSQL database. This will allow for storage and compilation as the data is being extracted (year-by-year 
