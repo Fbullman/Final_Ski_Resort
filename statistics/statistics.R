@@ -30,3 +30,16 @@ str(reviews)
 #calculate correlation matrix
 review_matrix <- as.matrix(reviews[,c("rating","Average.Snow.Depth","Average.High.Temp","Average.Low.Temp","Average.Temp")])
 cor(review_matrix)
+
+temps <- read.csv('temps.csv',stringsAsFactors = FALSE)
+str(temps)
+
+#correlation of temp only
+cor(temps$visit,temps$Average.Temp)
+
+#linear regression for average temp
+lm(visit ~ Average.Temp, temps)
+
+#summarize linear regression for average temp
+summary(lm(visit ~ Average.Temp, temps))
+
