@@ -173,6 +173,8 @@ In its current state, the model is not ready for deployment as the accuracy leve
 
 Building on this, there are additional ways to further refine and improve the NLP model created. Libraries such as SpaCy and NLTK allow for stop words to be extended, in order to remove common words that appear across a wide portion of reviews, regardless of sentiment. To futher explore and evaluate this possibility, the reviews were split into two separate spreadsheets, one containing only positive reviews and others containing only negative. Using Google Collaboratory the reviews were imported and using SpaCy, the review text was tokenized. Using a word counting function, the individual tokens were counted. Then, with Pandas, the word counts were put into a dataframe and exported for further evaluation. This model is most similar to bag-of-words, which analyzes the text on how frequently the words appear. 
 
+With the word counts, statistical analysis can be performed to demonstrate which words in particular are most likely to appear in positive and negative reviews. The probability of these instances could provide insight into what factors contribute to a positive customer experience or a negative one. 
+
 
 ### Results (Provisional)
 
