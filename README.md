@@ -133,6 +133,8 @@ Currently, Fabiana has updated the slides with the current work completed. Durin
 
 ### Database Integration
 
+The Entity Relationship Diagram (ERD) was created to show the relationships between tables that would be used during the different phases of the project. A data dictionary was created to specify attributes and to briefly explain which each table column means. All the usable weather, resort, visit and review data that we collected were cleaned using Jupyter Notebook (Python and Pandas), Google Collaboratory and the data was stored in PostgreSQL Database by a SQLAlchemy string connection. The stored data could easily be manipulated by using SQL language, combined, added to newly create tables and used in the visualization process phase. Additionally, the results from the machine learning model can be stored in the PostgreSQL Database. Further, once data has been imported, additional transformations and tables can be created in order to isolate relevant data and export it for future use.
+
 Entity Relationship Diagram (ERD)
 
 ![Final_Ski_Resort_Project](https://user-images.githubusercontent.com/89553690/151897449-496c7082-dae2-41bf-9870-efcbe96304e6.png)
@@ -140,8 +142,6 @@ Entity Relationship Diagram (ERD)
 Data Dictionary
 
 <img width="1000" alt="data_dictionary" src="https://user-images.githubusercontent.com/89553690/151897457-8c3debb5-f282-4bb7-a9d0-d7c900b4b7b9.png">
-
-The Entity Relationship Diagram (ERD) was created to show the relationships between tables that would be used during the different phases of the project. A data dictionary was created to specify attributes and to briefly explain which each table column means. All the usable weather, resort, visit and review data that we collected were cleaned using Jupyter Notebook (Python and Pandas), Google Collaboratory and the data was stored in PostgreSQL Database by a SQLAlchemy string connection. The stored data could easily be manipulated by using SQL language, combined, added to newly create tables and used in the visualization process phase. Additionally, the results from the machine learning model can be stored in the PostgreSQL Database. Further, once data has been imported, additional transformations and tables can be created in order to isolate relevant data and export it for future use.
 
 Extract, Load, and Transform (ELT)
 
